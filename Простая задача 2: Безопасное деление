@@ -1,0 +1,9 @@
+a = float(input('Введите первое число:'))
+b = float(input('Введите второе число:'))
+def safe_div(a, b, default=None):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return default
+result = safe_div(a, b)
+print(f"Результат: {result}")
